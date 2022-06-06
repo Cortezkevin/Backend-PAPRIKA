@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>{{actionTitle}}</h1>
+<div mat-dialog-content>
+    <form [formGroup]="categoryForm">
+        <mat-form-field style="margin-right: 4%;" appearance="outline">
+            <mat-label>Category Name</mat-label>
+            <input formControlName="name" matInput placeholder="Enter a category name" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Category Description</mat-label>
+            <textarea formControlName="description" matInput placeholder="Enter a category description"></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Category State</mat-label>
+            <input formControlName="state" matInput placeholder="Enter a category state" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Category Url Image</mat-label>
+            <input formControlName="url_image" matInput placeholder="Enter a category url image" />
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" color="primary" mat-button (click)="addCategory()">{{actionBtn}}</button>
+</div>

@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>PAPRIKA</span>
+    <button style="margin-left: 40px;" *ngIf="isLogged" routerLink="/product" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>build</mat-icon> MANT. PRODUCTOS    
+    </button>
+    <span class="example-spacer"></span>
+    <span style="margin-right: 10px;">{{username}}</span>
+    <button *ngIf="!isLogged" routerLink="/login" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" style="margin-right: 40px;">
+        <mat-icon>login</mat-icon>   LOGIN    
+    </button>
+    <button *ngIf="isLogged" routerLink="/login" mat-icon-button class="example-icon" style="margin-right: 40px;"
+     (click)="onLogout()"
+     aria-label="Example icon-button with share icon">
+     <mat-icon>logout</mat-icon>     LOGOUT  
+    </button>
+</mat-toolbar>

@@ -1,0 +1,29 @@
+
+<mat-card class="example-card container" style="margin-top: 60px;">
+    <mat-card-header>
+      <mat-card-title><h1 style="margin-left: 125px;">LOGIN</h1></mat-card-title>
+    </mat-card-header>
+    <mat-card-content style="margin-top: 15px;">
+        <form class="example-form"  #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+            <mat-form-field class="example-full-width" appearance="outline" name="username" id="username">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Enter a Username" name="username" id="username" [(ngModel)]="username" required>
+              <mat-icon matSuffix>account_box</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Enter a Password" name="password" id="password" [(ngModel)]="password" required>
+                <mat-icon matSuffix>https</mat-icon>
+              </mat-form-field>
+              <button mat-button color="primary" type="button" style="margin-left: 200px; margin-top: -15px;" >Olvide mi contraseña</button>
+              <button  type="submit" mat-flat-button color="primary" style="width: 350px;" [disabled]="!f.valid">
+                Iniciar Sesión <mat-icon>login</mat-icon>
+            </button>
+        </form>      
+    </mat-card-content>
+    <mat-card-actions> 
+        <button  type="button" mat-button color="primary" style="width: 350px; margin-top: -15px;">
+            Crear nuevo Cuenta
+        </button>     
+    </mat-card-actions>
+  </mat-card>

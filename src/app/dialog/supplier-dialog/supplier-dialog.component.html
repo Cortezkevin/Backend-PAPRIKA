@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>{{actionTitle}}</h1>
+<div mat-dialog-content>
+    <form [formGroup]="supplierForm">
+        <mat-form-field style="margin-right: 4%;" appearance="outline">
+            <mat-label>Supplier Name</mat-label>
+            <input formControlName="name" matInput placeholder="Enter a supplier name" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Supplier Address</mat-label>
+            <input formControlName="address" matInput placeholder="Enter a supplier address"/>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Supplier Phone</mat-label>
+            <input formControlName="phone" matInput placeholder="Enter a supplier phone" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Supplier State</mat-label>
+            <input formControlName="state" matInput placeholder="Enter a supplier state" />
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" color="primary" mat-button (click)="addSupplier()">{{actionBtn}}</button>
+</div>

@@ -1,0 +1,55 @@
+<h1 mat-dialog-title>Add new Product</h1>
+<div mat-dialog-content>
+    <form [formGroup]="productForm">
+        <mat-form-field class="mat-form-mid" style="margin-right: 4%;" appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <input formControlName="name" matInput placeholder="Enter a product name" />
+        </mat-form-field>
+        <mat-form-field class="mat-form-mid" appearance="outline">
+            <mat-label>Product Mark</mat-label>
+            <input formControlName="mark" matInput placeholder="Enter a product mark" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Product Description</mat-label>
+            <textarea formControlName="description" matInput placeholder="Enter a product description"></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Product Expiration Date</mat-label>
+            <input formControlName="expiration_date" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>      
+        <mat-form-field class="mat-form-min" style="margin-right: 3.3%;" appearance="outline">
+            <mat-label>Product Price</mat-label>
+            <input formControlName="price" type="number" matInput placeholder="Enter a product price" />
+        </mat-form-field>
+        <mat-form-field class="mat-form-min" style="margin-right: 3.3%;" appearance="outline">
+            <mat-label>Product Stock</mat-label>
+            <input formControlName="stock" type="number" matInput placeholder="Enter a product stock" />
+        </mat-form-field>
+        <mat-form-field class="mat-form-min" appearance="outline">
+            <mat-label>Product State</mat-label>
+            <input formControlName="state" matInput placeholder="Enter a product state" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Product Url Image</mat-label>
+            <input formControlName="url_image" matInput placeholder="Enter a product url image" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category" placeholder="Category">
+                <mat-option *ngFor="let item of categories" [value]="item">{{item}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Supplier</mat-label>
+            <mat-select formControlName="supplier" placeholder="Supplier">
+                <mat-option *ngFor="let item of suppliers" [value]="item">{{item}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" color="primary" mat-button (click)="addProduct()">{{actionBtn}}</button>
+</div>
