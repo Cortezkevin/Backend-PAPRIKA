@@ -67,6 +67,10 @@ export class AuthService {
       catchError((err) => this.handlerError(err))
       );
   }
+  //https://app-tienda-paprika.herokuapp.com/auth/changePassword/cortezkevinq@gmail.com
+  public changePassword(email:string):Observable<ResponseMessage>{
+    return this.httpClient.post<ResponseMessage>(`${this.authURL}/changePassword/${email}`,null);
+  }
 
   public logout():void{
     localStorage.clear();

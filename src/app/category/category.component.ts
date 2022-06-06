@@ -80,7 +80,7 @@ export class CategoryComponent implements OnInit {
 
   editProduct(row:any):void{
     this.dialog.open(CategoryDialogComponent,{
-      width: '40%', data: row
+      width: '30%', data: row
     }).afterClosed().subscribe( 
       val => {
         if(val === 'update'){

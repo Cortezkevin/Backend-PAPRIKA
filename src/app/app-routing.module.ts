@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ChangePasswordComponent } from './auth/change-password.component';
 import { LoginComponent } from './auth/login.component';
 import { CategoryComponent } from './category/category.component';
 import { ProdGuardService } from './guards/prod-guard.service';
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'index', component: IndexComponent},
   {path: 'login', component: LoginComponent, canActivate:[ProdGuardService], redirectTo: ''},
+  {path: 'changePassword', component: ChangePasswordComponent},
   {path: 'user', component: UserComponent},
   {path: 'product', component: ProductComponent},  
   {path: 'category', component: CategoryComponent},

@@ -25,6 +25,7 @@ import { SupplierDeleteDialogComponent } from './dialog/supplier-dialog/supplier
 import { UserComponent } from './user/user.component';
 import { UserDialogComponent } from './dialog/user-dialog/user-dialog.component';
 import { UserDeleteDialogComponent } from './dialog/user-dialog/user-delete-dialog.component';
+import { ChangePasswordComponent } from './auth/change-password.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { UserDeleteDialogComponent } from './dialog/user-dialog/user-delete-dial
     SupplierDeleteDialogComponent,
     UserComponent,
     UserDialogComponent,
-    UserDeleteDialogComponent
+    UserDeleteDialogComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

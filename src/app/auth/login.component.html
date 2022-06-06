@@ -15,14 +15,14 @@
                 <input type="password" matInput placeholder="Enter a Password" name="password" id="password" [(ngModel)]="password" required>
                 <mat-icon matSuffix>https</mat-icon>
               </mat-form-field>
-              <button mat-button color="primary" type="button" style="margin-left: 200px; margin-top: -15px;" >Olvide mi contraseña</button>
-              <button  type="submit" mat-flat-button color="primary" style="width: 350px;" [disabled]="!f.valid">
+              <button routerLink="/changePassword" mat-button color="primary" type="button" style="width: 100%; text-align: end;" >Olvide mi contraseña</button>
+              <button  type="submit" mat-flat-button color="primary" style="width: 100%;" [disabled]="!f.valid">
                 Iniciar Sesión <mat-icon>login</mat-icon>
             </button>
         </form>      
     </mat-card-content>
     <mat-card-actions> 
-        <button  type="button" mat-button color="primary" style="width: 350px; margin-top: -15px;">
+        <button  type="button" mat-button color="primary" style="width: 100%; margin-top: -15px;">
             Crear nuevo Cuenta
         </button>     
     </mat-card-actions>

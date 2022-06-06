@@ -23,7 +23,7 @@
   </mat-toolbar>
 
   <mat-sidenav-container>
-      <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+      <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8" closed mode="side">
         <img *ngIf="(authService.isLogged | async) else photo"
           class="avatar mat-elevation-z8"
           src="data:image/jpeg;base64,{{photoData}}"
@@ -36,7 +36,7 @@
         </ng-template>
 
     
-        <h4 class="name">{{authService.isUsername | async}}</h4>
+        <h4 class="name">{{username}}</h4>
         <p class="designation">Software Engineer</p>
     
         <mat-divider></mat-divider>

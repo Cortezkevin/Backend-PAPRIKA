@@ -2,6 +2,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { AfterViewChecked, AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
+import { NgToastModule, NgToastService } from 'ng-angular-popup';
 import { AuthService } from './service/auth.service';
 import { PhotoService } from './service/photo.service';
 
@@ -25,7 +26,8 @@ export class AppComponent implements AfterViewInit, OnInit{
     private observer: BreakpointObserver,
     private router: Router,
     public authService: AuthService,
-    public photoService: PhotoService
+    public photoService: PhotoService,
+    private toast: NgToastService
      ) {}
 
   ngOnInit(): void {
@@ -38,7 +40,7 @@ export class AppComponent implements AfterViewInit, OnInit{
       this.isLogged = true;
     }
 
-    this.observer
+    /*this.observer
       .observe(['(max-width: 800px)'])
       .subscribe((res) => {
         if (res.matches) {
@@ -48,7 +50,7 @@ export class AppComponent implements AfterViewInit, OnInit{
           this.sidenav.mode = 'side';
           this.sidenav.open();
         }
-      });
+      });*/
 
     /*this.router.events
       .pipe(
@@ -63,7 +65,9 @@ export class AppComponent implements AfterViewInit, OnInit{
   }
 
   onLogout(): void {
+    this.sidenav.close();
     this.authService.logout();  
+    this.toast.info({detail: "Info Message", summary: "Sesion Cerrada", duration: 3000});
     this.isLogged = false;  
   }
 
