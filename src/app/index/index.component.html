@@ -1,6 +1,82 @@
-<div><h2>Bienvenido {{username}}!</h2></div>
-<div style="width: 600px; height: 600px;">
-  <canvas id="myChart" ></canvas>
-  <div style="height: 100px;"></div>
-  <canvas id="myChart2" ></canvas>
- </div>
+<div class="welcome-title"><h1>Bienvenido {{username}}!</h1></div>
+
+<div class="container">
+  <div class="container-counts">
+    <div class="item-count">
+      <mat-card>
+        <mat-card-title><h1><b>360</b></h1></mat-card-title>
+        <mat-card-content>
+           Cantidad de Productos
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="item-count">
+      <mat-card>
+        <mat-card-title><h1><b>1000</b></h1></mat-card-title>
+        <mat-card-content>
+           Cantidad de Ventas
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="item-count">
+      <mat-card>
+        <mat-card-title><h1><b>60</b></h1></mat-card-title>
+        <mat-card-content>
+           Cantidad de Usuarios
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="item-count">
+      <mat-card>
+        <mat-card-title><h1><b>60</b></h1></mat-card-title>
+        <mat-card-content>
+           Cantidad de Usuarios
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="item-count">
+      <mat-card>
+        <mat-card-title><h1><b>60</b></h1></mat-card-title>
+        <mat-card-content>
+           Cantidad de Usuarios
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="container-charts">
+    <div class="item">
+      <mat-card>
+        <mat-card-title style="margin-bottom: 25px;" >Top 5 Products</mat-card-title>
+        <mat-card-content>
+          <canvas  id="myChart" ></canvas>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="item">
+      <mat-card>
+        <mat-card-title style="margin-bottom: 25px;" >Ventas de la Semana</mat-card-title>
+        <mat-card-content>
+          <canvas id="myChart2" ></canvas>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="item">
+      <mat-card>
+        <mat-card-title style="margin-bottom: 25px;" >Ventas </mat-card-title>
+        <mat-card-content>
+          <canvas id="myChart3" ></canvas>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="item">
+      <mat-card>
+        <mat-card-title style="margin-bottom: 25px;" >Ventas semana</mat-card-title>
+        <mat-card-content>
+          <canvas id="myChart4" ></canvas>
+        </mat-card-content>
+      </mat-card>
+    </div>
+   </div>
+  
+</div>

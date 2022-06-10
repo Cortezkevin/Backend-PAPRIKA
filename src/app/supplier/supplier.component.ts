@@ -79,7 +79,7 @@ export class SupplierComponent implements OnInit {
 
   editSupplier(row:any):void{
     this.dialog.open(SupplierDialogComponent,{
-      width: '40%', data: row
+      width: '30%', data: row
     }).afterClosed().subscribe( 
       val => {
         if(val === 'update'){

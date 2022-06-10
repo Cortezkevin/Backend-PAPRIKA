@@ -1,6 +1,6 @@
 <lib-ng-toast></lib-ng-toast>
 
-<mat-toolbar class="mat-elevation-z8" >
+<mat-toolbar color="primary" class="mat-elevation-z8" >
    <!--*ngIf="sidenav.mode === 'false'"-->
     <button
       mat-icon-button
@@ -86,9 +86,9 @@
           <span>Logout</span>
         </button>
       </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content  style="background-color: rgba(250,250,250,255);">
       <!-- class => mat-elevation-z8  => para que tenga en efecto de card-->
-      <div class="content ">
+      <div class="content">
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
