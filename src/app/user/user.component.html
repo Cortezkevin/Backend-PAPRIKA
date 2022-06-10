@@ -2,13 +2,13 @@
     <button [disabled]="!isAdmin" style="height: 40px; width: 180px;" mat-raised-button color="accent"
         (click)="openDialog()">
         <mat-icon>add</mat-icon>
-        New Category
+        New User
     </button>
     <div style="margin-top: 10px; ">
         <div>
             <mat-form-field appearance="outline">
                 <mat-label>Filter</mat-label>
-                <input matInput (keyup)="applyFilter($event)" placeholder="Ejemplo: Bebidas" #input />             
+                <input matInput (keyup)="applyFilter($event)" placeholder="Ejemplo: Admin" #input />             
             </mat-form-field>
         </div>
         <div class="mat-elevation-z8">
